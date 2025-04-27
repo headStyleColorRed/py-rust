@@ -615,6 +615,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 
 [[package]]
+name = "rust-torch"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "rand 0.9.1",
+ "tch",
+ "tiktoken-rs",
+]
+
+[[package]]
 name = "rustc-hash"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -701,16 +711,6 @@ name = "shlex"
 version = "1.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
-
-[[package]]
-name = "slm"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "rand 0.9.1",
- "tch",
- "tiktoken-rs",
-]
 
 [[package]]
 name = "smallvec"

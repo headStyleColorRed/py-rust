@@ -1,22 +1,6 @@
-# Rust PyTorch Project
+# Rust Torch Project
 
 This is a Rust project that uses PyTorch (through `tch-rs`) for AI and machine learning development.
-
-## Prerequisites
-
-Before you can build and run this project, you need to install libtorch (PyTorch C++ library).
-
-### Installing libtorch on macOS
-
-Simply run:
-```bash
-make setup
-```
-
-This will automatically:
-1. Download the appropriate version of libtorch for macOS
-2. Extract it to the correct location
-3. Set up the necessary environment variables
 
 ## Project Setup
 
@@ -28,12 +12,27 @@ This will automatically:
 2. Clone this repository:
    ```bash
    git clone <repository-url>
-   cd slm
+   cd rust-torch
    ```
 
 3. The project uses specific versions of dependencies, particularly:
    - `tch = "0.19.0"` (PyTorch bindings for Rust)
    Make sure not to change this version as it's compatible with the current libtorch setup.
+
+
+### Installing libtorch on macOS
+
+The good thing is that there's no need to install libtorch manually and globally. Simply run:
+```bash
+make setup
+```
+
+This will automatically:
+1. Download the appropriate version of libtorch for macOS
+2. Extract it to the correct location within this project
+3. Set up the necessary environment variables in the .cargo/config.toml file
+
+That way this project is self-contained, doesn't require any global installations and you don't have to worry about version conflicts.
 
 ## Building the Project
 
@@ -53,11 +52,8 @@ This project is set up for AI and machine learning development using PyTorch in 
 
 ## Troubleshooting
 
-If you encounter any linking errors:
-1. Verify that the `LIBTORCH` environment variable is correctly set
-2. Ensure the `LD_LIBRARY_PATH` includes the libtorch library path
-3. Check that the installed libtorch version is compatible with tch-rs version 0.19.0
+If you encounter any linking errors open an issue on GitHub and I'll help you out.
 
 ## License
 
-[Add your license information here]
+MIT License
