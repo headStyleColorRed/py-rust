@@ -8,27 +8,15 @@ Before you can build and run this project, you need to install libtorch (PyTorch
 
 ### Installing libtorch on macOS
 
-1. Download libtorch for macOS:
-   ```bash
-   wget https://download.pytorch.org/libtorch/cpu/libtorch-macos-2.1.0.zip
-   ```
+Simply run:
+```bash
+make setup
+```
 
-2. Extract the downloaded file:
-   ```bash
-   unzip libtorch-macos-2.1.0.zip
-   ```
-
-3. Set the required environment variables. Add these lines to your `~/.zshrc` or `~/.bash_profile`:
-   ```bash
-   export LIBTORCH=/path/to/libtorch
-   export LD_LIBRARY_PATH=${LIBTORCH}/lib:$LD_LIBRARY_PATH
-   ```
-   Replace `/path/to/libtorch` with the actual path where you extracted libtorch.
-
-4. Reload your shell configuration:
-   ```bash
-   source ~/.zshrc  # or source ~/.bash_profile
-   ```
+This will automatically:
+1. Download the appropriate version of libtorch for macOS
+2. Extract it to the correct location
+3. Set up the necessary environment variables
 
 ## Project Setup
 
